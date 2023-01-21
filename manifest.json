@@ -1,0 +1,21 @@
+{
+  "display_name": "JavaScript, jest",
+  "image_name": "cyberdojofoundation/javascript_node_jest:98eb16d",
+  "filename_extension": [
+    ".js"
+  ],
+  "max_seconds": 10,
+  "tab_size": 2,
+  "exercise": "100 doors",
+  "version": 2,
+  "created": [
+    2023,
+    1,
+    21,
+    10,
+    44,
+    54,
+    864855
+  ],
+  "id": "la6YtE"
+}
