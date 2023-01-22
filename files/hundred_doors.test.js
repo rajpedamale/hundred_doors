@@ -21,4 +21,10 @@ describe('Hundred Doors', () => {
     expect(/[^#]/.test(hundredDoors(testDoors))).toBeFalsy();
     expect(/(@#){50}/.test(hundredDoors(testDoors, 2))).toBeTruthy();
   });
+  it('should complete 100 visits', () => {
+    const hundredRounds = hundredDoors(testDoors, 100);
+    console.log(hundredRounds);
+    expect(hundredRounds).toBeTruthy();
+  });
+
 });
