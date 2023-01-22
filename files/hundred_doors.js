@@ -13,7 +13,7 @@ function visitDoors(updatedDoors, visit){
 
 function hundredDoors(doors, visitCount=-1) {
   let updatedDoors = [...doors];
-  for(let i=0; i<=visitCount; i++){
+  for(let i=0; i<visitCount; i++){
     updatedDoors = visitDoors(updatedDoors, i);
   }
   return updatedDoors.join('');
