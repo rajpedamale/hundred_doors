@@ -3,7 +3,7 @@
 const open = '@';
 const closed = '#';
 
-function visitDoors(updatedDoors){
+function visitDoors(updatedDoors, visit){
   return updatedDoors.map(
     (door, doorNumber) => {
       return door===closed?open:closed;
@@ -11,10 +11,10 @@ function visitDoors(updatedDoors){
   );
 }
 
-function hundredDoors(doors, visitCount=0) {
+function hundredDoors(doors, visitCount=-1) {
   let updatedDoors = [...doors];
-  for(let i=1; i<=visitCount; i++){
-    updatedDoors = visitDoors(updatedDoors);
+  for(let i=0; i<=visitCount; i++){
+    updatedDoors = visitDoors(updatedDoors, i);
   }
   return updatedDoors.join('');
 }
