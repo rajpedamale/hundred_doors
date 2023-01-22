@@ -5,9 +5,7 @@ const length = 100;
 let testDoors = '';
 describe('Hundred Doors', () => {
   beforeEach(() => {
-    testDoors = [...Array(length)].map(() => {
-      return '#';
-    });
+    testDoors = Array.from({length}, () => '#');
   });
   it('should have 100 chars', () => {
     expect(hundredDoors(testDoors).length).toEqual(100);

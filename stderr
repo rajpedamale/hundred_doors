@@ -1,11 +1,66 @@
-PASS ./hundred_doors.test.js
+FAIL ./hundred_doors.test.js
   Hundred Doors
-    ✓ should have 100 chars (3 ms)
-    ✓ should have only open or closed states
-    ✓ should have all open doors on first visit (1 ms)
+    ✕ should have 100 chars (3 ms)
+    ✕ should have only open or closed states (1 ms)
+    ✕ should have all open doors on first visit
 
-Test Suites: 1 passed, 1 total
-Tests:       3 passed, 3 total
+  ● Hundred Doors › should have 100 chars
+
+    ReferenceError: i is not defined
+
+       6 | function hundredDoors(doors, visitCount=0) {
+       7 |   let updatedDoors = [...doors];
+    >  8 |   for(i=1; i<=visitCount; i++){
+         |        ^
+       9 |     updatedDoors = doors.map(door => door===closed?open:closed);
+      10 |   }
+      11 |   return updatedDoors.join('');
+
+      at hundredDoors (hundred_doors.js:8:8)
+      at Object.<anonymous> (hundred_doors.test.js:11:12)
+
+  ● Hundred Doors › should have only open or closed states
+
+    ReferenceError: i is not defined
+
+       6 | function hundredDoors(doors, visitCount=0) {
+       7 |   let updatedDoors = [...doors];
+    >  8 |   for(i=1; i<=visitCount; i++){
+         |        ^
+       9 |     updatedDoors = doors.map(door => door===closed?open:closed);
+      10 |   }
+      11 |   return updatedDoors.join('');
+
+      at hundredDoors (hundred_doors.js:8:8)
+      at Object.<anonymous> (hundred_doors.test.js:14:25)
+
+  ● Hundred Doors › should have all open doors on first visit
+
+    ReferenceError: i is not defined
+
+       6 | function hundredDoors(doors, visitCount=0) {
+       7 |   let updatedDoors = [...doors];
+    >  8 |   for(i=1; i<=visitCount; i++){
+         |        ^
+       9 |     updatedDoors = doors.map(door => door===closed?open:closed);
+      10 |   }
+      11 |   return updatedDoors.join('');
+
+      at hundredDoors (hundred_doors.js:8:8)
+      at Object.<anonymous> (hundred_doors.test.js:17:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
 Snapshots:   0 total
-Time:        1.401 s
+Time:        1.394 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-01-22T11_46_26_619Z-debug.log
