@@ -1,7 +1,7 @@
 'use strict';
 
 function hundredDoors() {
-  return '@'.padEnd(99, '#');
+  return '@'.padEnd(100, '#');
 }
 
 module.exports = hundredDoors;
