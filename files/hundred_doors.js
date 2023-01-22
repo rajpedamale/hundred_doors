@@ -6,7 +6,7 @@ const doors = [...Array(length)].map(() => {
 });
 
 function hundredDoors() {
-  return doors;
+  return doors.join();
 }
 
 module.exports = hundredDoors;
