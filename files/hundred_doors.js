@@ -2,7 +2,7 @@
 
 function hundredDoors(doors, visitCount) {
   if(visitCount){
-    doors = doors.map(() => {'@'});
+    doors = doors.map(() => '@');
   }
   return doors.join('');
 }
