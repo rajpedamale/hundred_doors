@@ -1,11 +1,38 @@
-PASS ./hundred_doors.test.js
+FAIL ./hundred_doors.test.js
   Hundred Doors
-    ✓ should have 100 chars (5 ms)
+    ✓ should have 100 chars (3 ms)
     ✓ should have only open or closed states
     ✓ should have all open doors on first visit (1 ms)
+    ✕ should have every second door closed on second visit (2 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       3 passed, 3 total
+  ● Hundred Doors › should have every second door closed on second visit
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      20 |   it('should have every second door closed on second visit', () => {
+      21 |     expect(/[^#]/.test(hundredDoors(testDoors))).toBeFalsy();
+    > 22 |     expect(/(@#){50}/.test(hundredDoors(testDoors, 2))).toBeTruthy();
+         |                                                         ^
+      23 |   });
+      24 | });
+      25 | 
+
+      at Object.<anonymous> (hundred_doors.test.js:22:57)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
 Snapshots:   0 total
-Time:        1.387 s
+Time:        1.441 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-01-22T11_56_42_160Z-debug.log

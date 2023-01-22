@@ -17,4 +17,8 @@ describe('Hundred Doors', () => {
     expect(/[^#]/.test(hundredDoors(testDoors))).toBeFalsy();
     expect(/[^@]/.test(hundredDoors(testDoors, 1))).toBeFalsy();
   });
+  it('should have every second door closed on second visit', () => {
+    expect(/[^#]/.test(hundredDoors(testDoors))).toBeFalsy();
+    expect(/(@#){50}/.test(hundredDoors(testDoors, 2))).toBeTruthy();
+  });
 });
