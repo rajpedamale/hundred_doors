@@ -1,7 +1,12 @@
 'use strict';
 
+const length = 100;
+const doors = [...Array(length)].map(() => {
+  return { value: '@' };
+});
+
 function hundredDoors() {
-  return '@'.padEnd(100, '#');
+  return doors;
 }
 
 module.exports = hundredDoors;
