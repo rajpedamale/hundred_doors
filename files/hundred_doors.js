@@ -5,7 +5,7 @@ const doors = [...Array(length)].map(() => {
   return '@';
 });
 
-function hundredDoors() {
+function hundredDoors(doors=doors) {
   return doors.join('');
 }
 
