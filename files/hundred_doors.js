@@ -2,7 +2,7 @@
 
 const length = 100;
 const doors = [...Array(length)].map(() => {
-  return { value: '@' };
+  return '@';
 });
 
 function hundredDoors() {
