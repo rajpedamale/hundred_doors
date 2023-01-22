@@ -1,11 +1,11 @@
 PASS ./hundred_doors.test.js
   Hundred Doors
-    ✓ should have 100 chars (3 ms)
-    ✓ should have only open or closed states (1 ms)
+    ✓ should have 100 chars (2 ms)
+    ✓ should have only open or closed states (3 ms)
     ✓ should have all open doors on first visit
 
 Test Suites: 1 passed, 1 total
 Tests:       3 passed, 3 total
 Snapshots:   0 total
-Time:        1.342 s
+Time:        1.391 s
 Ran all test suites.
