@@ -2,9 +2,9 @@
 
 function hundredDoors(doors, visitCount) {
   if(visitCount){
-    doors = doors.map(() => '@');
+    updatedDoors = doors.map(() => '@');
   }
-  return doors.join('');
+  return updatedDoors.join('');
 }
 
 module.exports = hundredDoors;

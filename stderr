@@ -1,11 +1,66 @@
-PASS ./hundred_doors.test.js
+FAIL ./hundred_doors.test.js
   Hundred Doors
-    ✓ should have 100 chars (2 ms)
-    ✓ should have only open or closed states (1 ms)
-    ✓ should have all open doors on first visit (1 ms)
+    ✕ should have 100 chars (2 ms)
+    ✕ should have only open or closed states
+    ✕ should have all open doors on first visit (1 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       3 passed, 3 total
+  ● Hundred Doors › should have 100 chars
+
+    ReferenceError: updatedDoors is not defined
+
+       5 |     updatedDoors = doors.map(() => '@');
+       6 |   }
+    >  7 |   return updatedDoors.join('');
+         |   ^
+       8 | }
+       9 | 
+      10 | module.exports = hundredDoors;
+
+      at hundredDoors (hundred_doors.js:7:3)
+      at Object.<anonymous> (hundred_doors.test.js:13:12)
+
+  ● Hundred Doors › should have only open or closed states
+
+    ReferenceError: updatedDoors is not defined
+
+       5 |     updatedDoors = doors.map(() => '@');
+       6 |   }
+    >  7 |   return updatedDoors.join('');
+         |   ^
+       8 | }
+       9 | 
+      10 | module.exports = hundredDoors;
+
+      at hundredDoors (hundred_doors.js:7:3)
+      at Object.<anonymous> (hundred_doors.test.js:16:25)
+
+  ● Hundred Doors › should have all open doors on first visit
+
+    ReferenceError: updatedDoors is not defined
+
+       5 |     updatedDoors = doors.map(() => '@');
+       6 |   }
+    >  7 |   return updatedDoors.join('');
+         |   ^
+       8 | }
+       9 | 
+      10 | module.exports = hundredDoors;
+
+      at hundredDoors (hundred_doors.js:7:3)
+      at Object.<anonymous> (hundred_doors.test.js:19:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
 Snapshots:   0 total
-Time:        1.356 s
+Time:        1.329 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-01-22T11_31_15_643Z-debug.log
