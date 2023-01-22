@@ -8,8 +8,8 @@ function hundredDoors(doors, visitCount=0) {
   for(let i=1; i<=visitCount; i++){
     updatedDoors = 
       updatedDoors.map(
-        (door, doorNumber) => door===closed?open:closed);
-      )
+        (door, doorNumber) => door===closed?open:closed
+      );
   }
   return updatedDoors.join('');
 }
