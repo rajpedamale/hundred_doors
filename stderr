@@ -1,30 +1,46 @@
 FAIL ./hundred_doors.test.js
   Hundred Doors
-    ✓ should have 100 chars (3 ms)
+    ✓ should have 100 chars (4 ms)
     ✓ should have only open or closed states
-    ✓ should have all open doors on first visit (1 ms)
-    ✕ should have every second door closed on second visit (2 ms)
+    ✕ should have all open doors on first visit (4 ms)
+    ✕ should have every second door closed on second visit (1 ms)
+
+  ● Hundred Doors › should have all open doors on first visit
+
+    ReferenceError: doors is not defined
+
+       5 | 
+       6 | function visitDoors(visitCount){
+    >  7 |   return doors.map((door, doorNumber) => door===closed?open:closed);
+         |   ^
+       8 | }
+       9 | function hundredDoors(doors, visitCount=0) {
+      10 |   let updatedDoors = [...doors];
+
+      at visitDoors (hundred_doors.js:7:3)
+      at hundredDoors (hundred_doors.js:12:20)
+      at Object.<anonymous> (hundred_doors.test.js:18:24)
 
   ● Hundred Doors › should have every second door closed on second visit
 
-    expect(received).toBeTruthy()
+    ReferenceError: doors is not defined
 
-    Received: false
+       5 | 
+       6 | function visitDoors(visitCount){
+    >  7 |   return doors.map((door, doorNumber) => door===closed?open:closed);
+         |   ^
+       8 | }
+       9 | function hundredDoors(doors, visitCount=0) {
+      10 |   let updatedDoors = [...doors];
 
-      20 |   it('should have every second door closed on second visit', () => {
-      21 |     expect(/[^#]/.test(hundredDoors(testDoors))).toBeFalsy();
-    > 22 |     expect(/(@#){50}/.test(hundredDoors(testDoors, 2))).toBeTruthy();
-         |                                                         ^
-      23 |   });
-      24 | });
-      25 | 
-
-      at Object.<anonymous> (hundred_doors.test.js:22:57)
+      at visitDoors (hundred_doors.js:7:3)
+      at hundredDoors (hundred_doors.js:12:20)
+      at Object.<anonymous> (hundred_doors.test.js:22:28)
 
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 3 passed, 4 total
+Tests:       2 failed, 2 passed, 4 total
 Snapshots:   0 total
-Time:        1.441 s
+Time:        1.48 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -35,4 +51,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-01-22T11_56_42_160Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-01-22T11_59_07_362Z-debug.log

@@ -395,5 +395,21 @@
       42,
       561302
     ]
+  },
+  {
+    "duration": 4.182506,
+    "colour": "red",
+    "predicted": "green",
+    "revert_if_wrong": "off",
+    "index": 25,
+    "time": [
+      2023,
+      1,
+      22,
+      11,
+      59,
+      7,
+      721242
+    ]
   }
 ]
