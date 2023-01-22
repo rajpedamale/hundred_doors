@@ -10,7 +10,7 @@ function flipDoor(door){
 function visitDoors(updatedDoors, visit){
   return updatedDoors.map(
     (door, doorNumber) => {
-      return (doorNumber + 1)%visit === 0 ? flipDoor : door;
+      return (doorNumber + 1)%visit === 0 ? flipDoor(door) : door;
     }
   );
 }
