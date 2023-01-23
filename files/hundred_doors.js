@@ -7,12 +7,14 @@ function flipDoor(door){
   return door===closed?open:closed;
 }
 
-function updateDoor(door, doorNumber) {
-  return (doorNumber + 1)%visit === 0 ? flipDoor(door) : door;
+function updateDoor(visit){
+  return (door, doorNumber) => {
+    return (doorNumber + 1)%visit === 0 ? flipDoor(door) : door;
+  }
 }
 
 function visitDoors(updatedDoors, visit){
-  return updatedDoors.map(updateDoor);
+  return updatedDoors.map(updateDoor(visit));
 }
 
 function hundredDoors(doors, visitCount=0) {
