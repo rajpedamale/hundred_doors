@@ -1,13 +1,77 @@
-PASS ./hundred_doors.test.js
+FAIL ./hundred_doors.test.js
   Hundred Doors
-    ✓ should have 100 chars (4 ms)
+    ✓ should have 100 chars (3 ms)
     ✓ should have only open or closed states (1 ms)
-    ✓ should have all open doors on first visit
-    ✓ should have every second door closed on second visit (1 ms)
-    ✓ should complete 100 visits (18 ms)
+    ✕ should have all open doors on first visit (3 ms)
+    ✕ should have every second door closed on second visit (1 ms)
+    ✕ should complete 100 visits (1 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       5 passed, 5 total
+  ● Hundred Doors › should have all open doors on first visit
+
+    ReferenceError: visit is not defined
+
+       9 | 
+      10 | function updateDoor(door, doorNumber) {
+    > 11 |   return (doorNumber + 1)%visit === 0 ? flipDoor(door) : door;
+         |                           ^
+      12 | }
+      13 | 
+      14 | function visitDoors(updatedDoors, visit){
+
+      at map (hundred_doors.js:11:27)
+          at Array.map (<anonymous>)
+      at visitDoors (hundred_doors.js:15:23)
+      at hundredDoors (hundred_doors.js:21:20)
+      at Object.<anonymous> (hundred_doors.test.js:18:24)
+
+  ● Hundred Doors › should have every second door closed on second visit
+
+    ReferenceError: visit is not defined
+
+       9 | 
+      10 | function updateDoor(door, doorNumber) {
+    > 11 |   return (doorNumber + 1)%visit === 0 ? flipDoor(door) : door;
+         |                           ^
+      12 | }
+      13 | 
+      14 | function visitDoors(updatedDoors, visit){
+
+      at map (hundred_doors.js:11:27)
+          at Array.map (<anonymous>)
+      at visitDoors (hundred_doors.js:15:23)
+      at hundredDoors (hundred_doors.js:21:20)
+      at Object.<anonymous> (hundred_doors.test.js:22:28)
+
+  ● Hundred Doors › should complete 100 visits
+
+    ReferenceError: visit is not defined
+
+       9 | 
+      10 | function updateDoor(door, doorNumber) {
+    > 11 |   return (doorNumber + 1)%visit === 0 ? flipDoor(door) : door;
+         |                           ^
+      12 | }
+      13 | 
+      14 | function visitDoors(updatedDoors, visit){
+
+      at map (hundred_doors.js:11:27)
+          at Array.map (<anonymous>)
+      at visitDoors (hundred_doors.js:15:23)
+      at hundredDoors (hundred_doors.js:21:20)
+      at Object.<anonymous> (hundred_doors.test.js:25:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 2 passed, 5 total
 Snapshots:   0 total
-Time:        1.406 s
+Time:        1.82 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-01-23T10_26_22_707Z-debug.log
